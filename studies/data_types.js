@@ -1,11 +1,16 @@
 // DATA TYPES:
+// ----------
 
 // *Type of data:
 // this is how we check the type of a data
 console.log(typeof NaN); // number
 console.log(typeof Infinity); // number
 
+console.log('--------------------------- Strings ---------------------------')
+
 // 1- Strings:
+// -----------
+
 // *Index value: The string characters counter
 // a- The string characters are counted starting from 0
 let myName2 = "ibrahim"; // <<< I(0)B(1)R(2)A(3)H(4)I(5)M(6) 
@@ -16,7 +21,13 @@ console.log(myName2[2], myName3[4]);
 // c- This is how we check the length of the string (starting from #1)
 console.log(myName2.length); // 7
 
+
+console.log('--------------------------- Numbers ---------------------------')
+
+
 // 2- Numbers:
+// -----------
+
 // a- Index value for numbers:
 let currentYear1 = 2019; // <<< Numbers as a value should be without quotes
 console.log(currentYear1[2]); // <<< undefined results
@@ -43,7 +54,13 @@ let newNum2 = 30;
 console.log(newNum2 / Infinity); // 0
 // d- NaN: stands for "Not a Number". Anything that it's a number but it is not a number, it's a NaN
 
-// 3- BOOLEAN:
+
+console.log('--------------------------- Boolean ---------------------------')
+
+
+// 3- Boolean:
+// -----------
+
 // Boolean is 2 choices option verified by "True" or "False"
 // e.g. checkbox=true or checkbox=false
 let isDay = true;
@@ -55,14 +72,32 @@ console.log(Boolean(isDay)); // true
 // false / 0(zero) / ""(empty strings) / null / undefined / NaN (not a number)
 // Everything other than this 6 values is true
 
+
+console.log('--------------------------- Undefined ---------------------------')
+
+
 // 4- Undefined:
+// -------------
+
 let myFavColor; // <<< Any variable with declaration but without an assignment.
 
+
+console.log('--------------------------- Null ---------------------------')
+
+
 // 5- Null:
+// --------
+
 // Null is an empty or non-existent value and it must be assigned and it's a type is an object but it's not an object itself due to JS mistake
 let myFavColor1 = null;
 
-// 6- Object:
+
+console.log('--------------------------- Objects ---------------------------')
+
+
+// 6- Objects:
+// -----------
+
 // Objects are defined with curly braces {} and it can have objects inside objects
 let myObject = {
     key1: "value", // <<< The keys should be defined with double points ":" and not with "="
@@ -77,3 +112,21 @@ console.log(myObject.key1); // value
 // this is how we reach an object:
 console.log(myObject.key3.key31.newObject); // hello
 console.log(typeof myObject); // object
+
+
+console.log('--------------------------- Symbols ---------------------------')
+
+
+// 7- Symbols
+// -----------
+
+// symbols are always unique, even if they look identical they still has a unique IDs
+const symbolA = Symbol();
+console.log(typeof symbolA); // symbol
+const symbolB = Symbol();
+console.log(symbolA, symbolB); // Symbol() Symbol()
+
+// symbols with same value
+const symbolC = Symbol('a generic name');
+const symbolD = Symbol('a generic name');
+console.log(symbolC == symbolD); // false
